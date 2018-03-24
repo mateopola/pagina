@@ -106,8 +106,7 @@
   <script>
     function punto1(){
       var gal = parseInt(document.getElementById("galones").value);
-      document.getElementById("litro").innerHTML = 1 * 3.7854;
-            document.getElementById("peso2").innerHTML = gal;
+      document.getElementById("litro").innerHTML = gal * 3.7854;
     }
     function punto2(){
       var peso = parseInt(document.getElementById("peso1").value);
