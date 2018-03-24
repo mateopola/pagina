@@ -82,12 +82,37 @@
       <input type="number" id="litros" size="20">
       <input type="button" onClick="punto1()" value="Convertir">
     </p>
+    <p>
+      Peso en Tierra:
+      <input type="number" id="peso1" size="20">
+      Peso en Luna: 
+      <input type="number" id="peso2" size="20">
+      <input type="button" onClick="punto2()" value="Convertir">
+    </p>
+    <p>
+      Centimetros:
+      <input type="number" id="cm" size="20">
+      Metros: 
+      <input type="number" id="m" size="20">
+      Kilometros: 
+      <input type="number" id="km" size="20">
+      <input type="button" onClick="punto3()" value="Convertir">
+    </p>
   </form>
     
   <script>
     function punto1(){
       var gal = document.getElementById("galones");
       document.getElementById("litros").value = gal;
+    }
+    function punto2(){
+      var peso = document.getElementById("peso1");
+      document.getElementById("peso2").value = peso * 0.17;
+    }
+    function punto3(){
+      var cm = document.getElementById("cm");
+      document.getElementById("m").value = cm * 0.01;
+      document.getElementById("km").value = cm * 0.00001;
     }
   </script>
   
