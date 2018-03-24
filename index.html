@@ -105,16 +105,16 @@
     
   <script>
     function punto1(){
-      var gal = parseInt(document.getElementById("galones"));
+      var gal = parseInt(document.getElementById("galones").value);
       document.getElementById("litro").innerHTML = 1 * 3.7854;
             document.getElementById("peso2").innerHTML = gal;
     }
     function punto2(){
-      var peso = parseInt(document.getElementById("peso1"));
+      var peso = parseInt(document.getElementById("peso1").value);
       document.getElementById("peso2").value = peso * 0.17;
     }
     function punto3(){
-      var cm = parseInt(document.getElementById("cm"));
+      var cm = parseInt(document.getElementById("cm").value);
       document.getElementById("m").value = cm * 0.01;
       document.getElementById("km").value = cm * 0.00001;
     }
