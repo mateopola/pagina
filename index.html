@@ -75,21 +75,21 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   
   <form>
-  <p>
-    Galones:
-    <input type="number" id="galones" size="20">
-    Litros: 
-    <input type="number" id="litros" size="20">
-  </p>
-    <input type="button" onClick="punto1()" value="Convertir">
+    <p>
+      Galones:
+      <input type="number" id="galones" size="20">
+      Litros: 
+      <input type="number" id="litros" size="20">
+      <input type="button" onClick="punto1()" value="Convertir">
+    </p>
   </form>
     
   <script>
-          function punto1(){
-            var gal = document.getElementById("galones");
-            document.getElementById("litros").value = gal;
-          }
-          </script>
+    function punto1(){
+      var gal = document.getElementById("galones");
+      document.getElementById("litros").value = gal;
+    }
+  </script>
   
   
   
