@@ -78,10 +78,10 @@
     <p>
       Galones:
       <input type="number" id="galones" size="20">
-      Litros: 
-      <input type="number" step="any" id="litro" size="20">
-      <input type="button" onClick="punto1()" value="Convertir">
     </p>
+    Litros: 
+    <p id="litro"></p>
+    <input type="button" onClick="punto1()" value="Convertir">
     <p>
       Peso en Tierra:
       <input type="number" id="peso1" size="20">
@@ -102,7 +102,8 @@
     
   <script>
     function punto1(){
-      document.getElementById("litro").value = 1;
+      var peso = document.getElementById("galones");
+      document.getElementById("litro").innerHTML = peso * 3.7854;
     }
     function punto2(){
       var peso = document.getElementById("peso1");
