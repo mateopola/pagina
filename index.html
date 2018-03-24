@@ -80,37 +80,40 @@
       <input type="number" id="galones" size="20">
     </p>
     Litros: 
-    <p id="litro"></p>
+    <p id="litro" value="0"></p>
     <input type="button" onClick="punto1()" value="Convertir">
+    <p></p>
     <p>
       Peso en Tierra:
       <input type="number" id="peso1" size="20">
-      Peso en Luna: 
-      <input type="number" step="any" id="peso2" size="20">
-      <input type="button" onClick="punto2()" value="Convertir">
+      
     </p>
+    Peso en Luna: 
+    <p id="peso2" value="0"></p>
+    <input type="button" onClick="punto2()" value="Convertir">
+    <p></p>
     <p>
       Centimetros:
       <input type="number" step="any" id="cm" size="20">
-      Metros: 
-      <input type="number" step="any" id="m" size="20">
-      Kilometros: 
-      <input type="number" step="any" id="km" size="20">
-      <input type="button" onClick="punto3()" value="Convertir">
     </p>
+    Metros: 
+    <p id="m" value="0"></p>
+    Kilometros: 
+    <p id="km" value="0"></p>
+    <input type="button" onClick="punto3()" value="Convertir">
   </form>
     
   <script>
     function punto1(){
-      var peso = document.getElementById("galones");
+      var peso = parseInt(document.getElementById("galones"));
       document.getElementById("litro").innerHTML = peso * 3.7854;
     }
     function punto2(){
-      var peso = document.getElementById("peso1");
+      var peso = parseInt(document.getElementById("peso1"));
       document.getElementById("peso2").value = peso * 0.17;
     }
     function punto3(){
-      var cm = document.getElementById("cm");
+      var cm = parseInt(document.getElementById("cm"));
       document.getElementById("m").value = cm * 0.01;
       document.getElementById("km").value = cm * 0.00001;
     }
