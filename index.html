@@ -31,94 +31,49 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-          <h1 class="mt-5">Mateo Polanco Rodríguez</h1>
-          <img src="tenor.gif" class="img-fluid rounded-circle p-5"/>          
-      </div>
-    </div>
-    <div class="row">
-          <div class="col-lg-12">
-              <h1 class="mt-5 text-center">Mi biografía</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quibusdam corrupti optio, similique temporibus ut facilis explicabo consequatur numquam, animi repellendus culpa nemo a aperiam possimus sint facere? Pariatur, error.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ullam sapiente, ducimus quas sed ab? Nulla illo ea amet tempore hic, qui voluptates et esse dolorum quasi veritatis sit! Fugit.
-              </p>
-          </div>
-      </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="mt-5 text-center">Intereses</h1>
-            <ol>
-              <li>Leer</li>
-              <li>Ir a Cine</li>
-              <li>Montar Bicicleta</li>
-            </ol>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="mt-5 text-center">Redes Sociales</h1>
-            <ul>
-              <li><a href="https://twitter.com/Mateopola">Twitter</a></li>
-              <li><a href="https://www.facebook.com/mateopolanco2">Facebook</a></li>
-              <li><a href="https://github.com/mateopola">Github</a></li>
-            </ul>
-        </div>
-    </div>
-  </div>
-  
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  
   <form>
     <p>
-      Galones:
-      <input id="galones" size="20">
+      Variable A:
+      <input id="datoA" size="20">
+      Variable B:
+      <input id="datoB" size="20">
     </p>
-    Litros: 
-    <p id="litro" value="0"></p>
-    <input type="button" onClick="punto1()" value="Convertir">
-    <p></p>
+      <input type="button" onClick="suma()" value="+">
+      <input type="button" onClick="resta()" value="-">
+      <input type="button" onClick="multiplicacion()" value="*">
+      <input type="button" onClick="division()" value="/">
     <p>
-      Peso en Tierra:
-      <input id="peso1" size="20">
+      Resultado: 
+      <p id="resultado" value="0"></p>
     </p>
-    Peso en Luna: 
-    <p id="peso2" value="0"></p>
-    <input type="button" onClick="punto2()" value="Convertir">
-    <p></p>
-    <p>
-      Centimetros:
-      <input id="cm" size="20">
-    </p>
-    Metros: 
-    <p id="m" value="0"></p>
-    Kilometros: 
-    <p id="km" value="0"></p>
-    <input type="button" onClick="punto3()" value="Convertir">
   </form>
     
   <script>
-    function punto1(){
-      var gal = parseInt(document.getElementById("galones").value);
-      document.getElementById("litro").innerHTML = gal * 3.7854;
+    function suma(){
+      var a = parseInt(document.getElementById("datoA").value);
+      var b = parseInt(document.getElementById("datoB").value);
+      
+      document.getElementById("resultado").innerHTML = a + b;
     }
-    function punto2(){
-      var peso = parseInt(document.getElementById("peso1").value);
-      document.getElementById("peso2").innerHTML = peso * 0.17;
+    function resta(){
+      var a = parseInt(document.getElementById("datoA").value);
+      var b = parseInt(document.getElementById("datoB").value);
+      
+      document.getElementById("resultado").innerHTML = a - b;
     }
-    function punto3(){
-      var cm = parseInt(document.getElementById("cm").value);
-      document.getElementById("m").innerHTML = cm * 0.01;
-      document.getElementById("km").innerHTML = cm * 0.00001;
+    function multiplicacion(){
+      var a = parseInt(document.getElementById("datoA").value);
+      var b = parseInt(document.getElementById("datoB").value);
+      
+      document.getElementById("resultado").innerHTML = a * b;
+    }
+    function division(){
+      var a = parseInt(document.getElementById("datoA").value);
+      var b = parseInt(document.getElementById("datoB").value);
+      
+      document.getElementById("resultado").innerHTML = a / b;
     }
   </script>
   
 </body>
-
 </html>
-
