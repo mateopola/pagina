@@ -80,49 +80,74 @@
                 <h2>Casos de Éxito que Inspiran</h2>
                 <p class="section-subtitle">Descubre cómo hemos ayudado a empresas como la tuya a alcanzar sus objetivos.</p>
 
-                <div class="filter-placeholder" style="text-align: center; margin-bottom: 30px;">
-                    <strong>Filtrar por Industria:</strong>
-                    <span>[Financiero]</span> <span>[Legal]</span> <span>[Retail]</span> <span>[Todos]</span>
-                    <p><small>(Funcionalidad de filtro se implementará próximamente)</small></p>
+                <div class="case-study-filters">
+                    <button class="filter-chip active" data-filter="All">Todos</button>
+                    <button class="filter-chip" data-filter="Retail">Retail</button>
+                    <button class="filter-chip" data-filter="Financial Services">Financial Services</button>
+                    <button class="filter-chip" data-filter="Healthcare">Healthcare</button>
+                    <button class="filter-chip" data-filter="Insurance / Social Services">Insurance / Social Services</button>
+                    <button class="filter-chip" data-filter="BPO & Business Services">BPO & Business Services</button>
                 </div>
+                <p style="text-align:center; margin-bottom: 30px;"><small>(La funcionalidad de filtro se conectará próximamente)</small></p>
 
-                <div class="case-studies-grid">
-                    <div class="case-study-card">
-                        <div class="case-study-logo-placeholder">[Logo Flamingo]</div>
-                        <h3>Flamingo</h3>
-                        <h4>Accounts-Payable Automation</h4>
-                        <p><strong>Resultado Clave:</strong> 60% reducción en tiempo de procesamiento de facturas; visibilidad del proveedor en tiempo real.</p>
+                <div class="carousel-container">
+                    <div class="carousel-slides">
+                        <!-- Slide 1: Flamingo -->
+                        <div class="carousel-slide" data-industry="Retail">
+                            <div class="slide-content">
+                                <div class="case-study-logo-placeholder">[Logo Flamingo]</div>
+                                <div class="case-study-banner-placeholder" style="width:100%; height:200px; background:#eee; display:flex; align-items:center; justify-content:center; margin-bottom:15px;">Banner 1200x800 (Flamingo)</div>
+                                <h3>Flamingo</h3>
+                                <h4>Accounts-Payable Automation</h4>
+                                <p><strong>Resultado Clave:</strong> 60% reducción en tiempo de procesamiento de facturas; visibilidad del proveedor en tiempo real.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2: Comultrasan -->
+                        <div class="carousel-slide" data-industry="Financial Services">
+                            <div class="slide-content">
+                                <div class="case-study-logo-placeholder">[Logo Comultrasan]</div>
+                                <div class="case-study-banner-placeholder" style="width:100%; height:200px; background:#eee; display:flex; align-items:center; justify-content:center; margin-bottom:15px;">Banner 1200x800 (Comultrasan)</div>
+                                <h3>Comultrasan</h3>
+                                <h4>Suite of AI Agents & Process Automation</h4>
+                                <p><strong>Resultado Clave:</strong> 6 flujos de trabajo automatizados, reducción promedio del TAT del 45%; chatbot interno responde >80% de las consultas de los empleados.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 3: Keralty -->
+                        <div class="carousel-slide" data-industry="Healthcare">
+                            <div class="slide-content">
+                                <div class="case-study-logo-placeholder">[Logo Keralty]</div>
+                                <div class="case-study-banner-placeholder" style="width:100%; height:200px; background:#eee; display:flex; align-items:center; justify-content:center; margin-bottom:15px;">Banner 1200x800 (Keralty)</div>
+                                <h3>Keralty</h3>
+                                <h4>Electronic Affiliation (On-boarding)</h4>
+                                <p><strong>Resultado Clave:</strong> Inscripción de miembros 70% más rápida; procesamiento promedio <2 min.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 4: Asulada -->
+                        <div class="carousel-slide" data-industry="Insurance / Social Services">
+                            <div class="slide-content">
+                                <div class="case-study-logo-placeholder">[Logo Asulada]</div>
+                                <div class="case-study-banner-placeholder" style="width:100%; height:200px; background:#eee; display:flex; align-items:center; justify-content:center; margin-bottom:15px;">Banner 1200x800 (Asulada)</div>
+                                <h3>Asulada</h3>
+                                <h4>AI-Driven Document Classification</h4>
+                                <p><strong>Resultado Clave:</strong> Precisión de categorización del 95%; caída del 50% en la revisión manual.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 5: Contento -->
+                        <div class="carousel-slide" data-industry="BPO & Business Services">
+                            <div class="slide-content">
+                                <div class="case-study-logo-placeholder">[Logo Contento]</div>
+                                <div class="case-study-banner-placeholder" style="width:100%; height:200px; background:#eee; display:flex; align-items:center; justify-content:center; margin-bottom:15px;">Banner 1200x800 (Contento)</div>
+                                <h3>Contento</h3>
+                                <h4>End-to-End Contracting Workflow</h4>
+                                <p><strong>Resultado Clave:</strong> Ciclo de redacción a aprobación reducido de 10 días a 3 días.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="case-study-card">
-                        <div class="case-study-logo-placeholder">[Logo Comultrasan]</div>
-                        <h3>Comultrasan</h3>
-                        <h4>Suite of AI Agents & Process Automation</h4>
-                        <p><strong>Resultado Clave:</strong> 6 flujos de trabajo automatizados, reducción promedio del TAT del 45%; chatbot interno responde >80% de las consultas de los empleados.</p>
+                    <button class="carousel-control prev">&lt; Prev</button>
+                    <button class="carousel-control next">Next &gt;</button>
+                    <div class="carousel-dots">
+                        <!-- Dots will be generated by JS or manually added if preferred -->
                     </div>
-                    <div class="case-study-card">
-                        <div class="case-study-logo-placeholder">[Logo Keralty]</div>
-                        <h3>Keralty</h3>
-                        <h4>Electronic Affiliation (On-boarding)</h4>
-                        <p><strong>Resultado Clave:</strong> Inscripción de miembros 70% más rápida; procesamiento promedio <2 min.</p>
-                    </div>
-                    <div class="case-study-card">
-                        <div class="case-study-logo-placeholder">[Logo Asulada]</div>
-                        <h3>Asulada</h3>
-                        <h4>AI-Driven Document Classification</h4>
-                        <p><strong>Resultado Clave:</strong> Precisión de categorización del 95%; caída del 50% en la revisión manual.</p>
-                    </div>
-                    <div class="case-study-card">
-                        <div class="case-study-logo-placeholder">[Logo Contento]</div>
-                        <h3>Contento</h3>
-                        <h4>End-to-End Contracting Workflow</h4>
-                        <p><strong>Resultado Clave:</strong> Ciclo de redacción a aprobación reducido de 10 días a 3 días.</p>
-                    </div>
-                </div>
-                <!-- Basic carousel controls placeholder - functionality to be added later -->
-                <div class="carousel-controls-placeholder" style="text-align: center; margin-top: 30px;">
-                    <button>&lt; Prev</button>
-                    <button>Next &gt;</button>
-                    <p><small>(Funcionalidad de carrusel se implementará próximamente)</small></p>
                 </div>
             </div>
         </section>
@@ -300,5 +325,7 @@
     <div id="parly-chatbot-placeholder">
         <span class="icon-placeholder">💬</span> <!-- Or use a text like "Chat" -->
     </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

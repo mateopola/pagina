@@ -351,84 +351,176 @@ footer {
     margin-bottom: 15px;
 }
 
-.filter-placeholder span {
-    margin: 0 10px;
-    padding: 5px 10px;
-    background-color: var(--pratech-white);
-    border: 1px solid var(--pratech-lime-green);
-    border-radius: 5px;
-    cursor: pointer; /* Indicates interactivity, though not yet functional */
+/* Case Study Filter Chip Styles */
+#case-studies .case-study-filters {
+    text-align: center;
+    margin-bottom: 20px; /* Space before the descriptive small text or carousel */
+    padding: 10px 0;
 }
 
-.filter-placeholder span:hover {
-    background-color: var(--pratech-lime-green);
+#case-studies .filter-chip {
+    background-color: var(--pratech-white);
     color: var(--pratech-dark-blue);
+    border: 1px solid var(--pratech-lime-green);
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px; /* Rounded pill shape */
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
-.case-studies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 30px;
-    width: 90%;
-    max-width: 1200px;
+#case-studies .filter-chip:hover {
+    background-color: var(--pratech-lime-green);
+    color: var(--pratech-white); /* White text on hover for better contrast if dark blue is too much */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+#case-studies .filter-chip.active {
+    background-color: var(--pratech-lime-green);
+    color: var(--pratech-dark-blue); /* Dark blue text on active for emphasis */
+    font-weight: bold;
+    border-color: var(--pratech-dark-blue); /* Optional: darker border for active */
+}
+
+/* Carousel Specific Styles for Case Studies Section */
+
+#case-studies .carousel-container {
+    position: relative; /* For positioning arrows */
+    width: 90%; /* Adjust as needed, or use max-width */
+    max-width: 800px; /* Example max-width for a single large slide */
     margin: 0 auto;
-    text-align: left;
+    overflow: hidden; /* Crucial for hiding non-active slides */
+    border-radius: 8px; /* Optional: if you want rounded corners for the carousel frame */
 }
 
-.case-study-card {
-    background-color: var(--pratech-white);
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 25px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
+#case-studies .carousel-slides {
+    display: flex; /* Arranges slides in a row */
+    transition: transform 0.5s ease-in-out; /* Animation for slide transition */
+    /* Width will be set by JS or needs to be calculated if all slides are always in DOM: num_slides * 100% */
 }
 
-.case-study-logo-placeholder {
-    height: 50px; /* Placeholder height for logo */
-    background-color: #f0f0f0;
-    margin-bottom: 15px;
+#case-studies .carousel-slide {
+    min-width: 100%; /* Each slide takes full container width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    /* padding: 20px; Remove padding here if .slide-content handles it */
+    background-color: var(--pratech-white); /* Slide background */
+    /* border: 1px solid #e0e0e0; Optional: if slides need individual borders */
+    /* border-radius: 8px; Optional: if slides themselves are rounded */
+}
+
+/* CSS to hide slides for filtering */
+#case-studies .carousel-slide.hidden-by-filter {
+    /* Instead of display:none which breaks flexbox calculations for transform,
+       we can try to visually hide it but keep it in layout, or use display:none
+       and accept that the carousel might need more complex JS to handle it.
+       For a start, display:none is simpler to implement the hiding.
+       The JS will need to be careful about which slide is considered "current".
+    */
+    display: none !important; /* Force hide, may need JS adjustments for carousel counts */
+}
+
+#case-studies .carousel-slide .slide-content {
+    padding: 30px; /* Inner padding for the content of the slide */
+    text-align: left; /* Ensure text inside slide is left-aligned */
+}
+
+/* Styling for the banner placeholder within a slide */
+#case-studies .case-study-banner-placeholder {
+    width: 100%;
+    height: 250px; /* Adjust height as desired for banner */
+    background-color: #e0e0e0; /* Placeholder color */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #aaa;
+    color: #999;
     font-style: italic;
-    border-radius: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px; /* Rounded corners for banner */
 }
 
-.case-study-card h3 { /* Client Name */
-    font-size: 1.6rem;
+/* Re-using some previous .case-study-card styles for typography if applicable */
+#case-studies .carousel-slide h3 { /* Client Name */
+    font-size: 1.8rem; /* Larger for prominent client name */
     color: var(--pratech-dark-blue);
     margin-bottom: 5px;
 }
 
-.case-study-card h4 { /* Project Name */
-    font-size: 1.1rem;
+#case-studies .carousel-slide h4 { /* Project Name */
+    font-size: 1.2rem;
     color: var(--pratech-lime-green);
     margin-bottom: 15px;
-    font-weight: 500; /* Medium weight for project title */
+    font-weight: 600; /* Bolder project title */
 }
 
-.case-study-card p { /* Outcome */
-    font-size: 0.95rem;
+#case-studies .carousel-slide p { /* Outcome */
+    font-size: 1rem;
     line-height: 1.6;
     color: #333;
-    flex-grow: 1; /* Allows paragraph to take available space, pushing button down if any */
 }
 
-/* Placeholder styling for carousel controls */
-.carousel-controls-placeholder button {
-    background-color: var(--pratech-lime-green);
-    color: var(--pratech-dark-blue);
+/* Carousel Controls (Arrows) */
+#case-studies .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(11, 44, 77, 0.7); /* Dark blue with transparency */
+    color: var(--pratech-white);
     border: none;
     padding: 10px 15px;
-    margin: 0 5px;
-    border-radius: 5px;
+    font-size: 1.5rem;
     cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
-.carousel-controls-placeholder button:hover {
-    background-color: #7cb342;
+
+#case-studies .carousel-control:hover {
+    background-color: var(--pratech-dark-blue); /* Solid dark blue on hover */
+}
+
+#case-studies .carousel-control.prev {
+    left: 10px;
+}
+
+#case-studies .carousel-control.next {
+    right: 10px;
+}
+
+/* Carousel Dots */
+#case-studies .carousel-dots {
+    text-align: center;
+    padding: 15px 0;
+}
+
+#case-studies .carousel-dots .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ccc; /* Inactive dot color */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#case-studies .carousel-dots .dot.active {
+    background-color: var(--pratech-lime-green); /* Active dot color */
+}
+
+/* Ensure the logo placeholder styling is still appropriate */
+#case-studies .case-study-logo-placeholder {
+    height: 40px; /* Adjusted height */
+    background-color: #f0f0f0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left; /* Align logo to the left */
+    padding-left: 10px; /* Add some padding if aligned left */
+    color: #aaa;
+    font-style: italic;
+    border-radius: 5px;
 }
 
 /* Resources Section Styles */
