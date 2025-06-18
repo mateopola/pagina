@@ -6,29 +6,73 @@
     <title>Pratech Group - Conectamos Personas y Procesos con IA y Automatización</title>
     <!-- CSS links will be added later -->
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <!-- Navigation and language switcher will go here -->
-        <p>Pratech Group [Nav Placeholder]</p>
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">Pratech Group</a>
+                <ul class="nav-links">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#case-studies">Casos de Éxito</a></li>
+                    <li><a href="#resources">Recursos</a></li>
+                    <li><a href="#ia-lab">IA Lab</a></li>
+                    <li><a href="#talent-culture">Talento</a></li>
+                </ul>
+                <div class="lang-switcher">
+                    <span>ES</span> | <span>EN</span>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
         <section id="hero">
-            <!-- Hero con mensaje claro (“Conectamos personas y procesos con IA y automatización”) y un video corto de 10 s mostrando dashboards, robots y chatbots en acción. -->
-            <h1>Conectamos personas y procesos con IA y automatización</h1>
-            <!-- Video placeholder -->
-            <p>[Video: dashboards, robots, chatbots en acción]</p>
-            <button>Agenda una demo</button> <!-- CTA principal -->
+            <div class="container hero-content">
+                <h1>Conectamos personas y procesos con IA y Automatización</h1>
+                <p class="subtitle">Transformamos tu negocio con soluciones inteligentes que optimizan la eficiencia y potencian el crecimiento.</p>
+                <div class="video-placeholder">
+                    <!-- Placeholder for 10s video: <video src="path/to/your/video.mp4" autoplay muted loop playsinline></video> -->
+                    <img src="https://via.placeholder.com/600x300.png?text=Video+Placeholder+(10s)" alt="Video demostrativo de dashboards, robots y chatbots en acción">
+                    <p class="video-caption">[Video: dashboards, robots, chatbots en acción]</p>
+                </div>
+                <a href="#contact-form" class="btn btn-primary btn-lg cta-button">Agenda una Demo Gratuita</a>
+            </div>
         </section>
 
         <section id="services">
-            <h2>Nuestros Servicios</h2>
-            <!-- Cards animados (hover) para: Automatización de procesos (BAW/CP4BA), Agentes conversacionales (Parly), Consultoría BPM & RPA, Integración y DataOps -->
-            <div>[Card: Automatización de procesos (BAW/CP4BA)]</div>
-            <div>[Card: Agentes conversacionales (Parly)]</div>
-            <div>[Card: Consultoría BPM & RPA]</div>
-            <div>[Card: Integración y DataOps]</div>
+            <div class="container">
+                <h2>Nuestros Servicios Clave</h2>
+                <p class="section-subtitle">Soluciones innovadoras para potenciar tu transformación digital.</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <!-- Icon placeholder: <i class="icon-automation"></i> -->
+                        <h3>Automatización de Procesos (BAW/CP4BA)</h3>
+                        <p>Optimizamos tus flujos de trabajo y mejoramos la eficiencia operativa con IBM Business Automation Workflow y Cloud Pak for Business Automation.</p>
+                        <a href="#" class="learn-more">Conocer más</a>
+                    </div>
+                    <div class="service-card">
+                        <!-- Icon placeholder: <i class="icon-chatbot"></i> -->
+                        <h3>Agentes Conversacionales (Parly)</h3>
+                        <p>Implementamos chatbots inteligentes con IA (Parly) para mejorar la experiencia de cliente y automatizar interacciones.</p>
+                        <a href="#" class="learn-more">Conocer más</a>
+                    </div>
+                    <div class="service-card">
+                        <!-- Icon placeholder: <i class="icon-consulting"></i> -->
+                        <h3>Consultoría BPM & RPA</h3>
+                        <p>Te guiamos en la adopción de Business Process Management y Robotic Process Automation para maximizar tu ROI.</p>
+                        <a href="#" class="learn-more">Conocer más</a>
+                    </div>
+                    <div class="service-card">
+                        <!-- Icon placeholder: <i class="icon-dataops"></i> -->
+                        <h3>Integración y DataOps</h3>
+                        <p>Conectamos tus sistemas y optimizamos tus operaciones de datos para una toma de decisiones más ágil y eficaz.</p>
+                        <a href="#" class="learn-more">Conocer más</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="case-studies">
@@ -57,9 +101,62 @@
     </main>
 
     <footer>
-        <!-- Footer enriquecido: mapa de Medellín, redes, partners tecnológicos y mini-formulario de contacto. -->
-        <p>Footer Pratech Group [Mapa, Redes, Partners, Contacto]</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3 class="logo-text">Pratech Group</h3>
+                    <p>
+                        Aliados estratégicos en transformación digital, hiperautomatización y agentes conversacionales con IA.
+                    </p>
+                    <div class="contact">
+                        <span><i class="fas fa-map-marker-alt"></i> Medellín, Colombia</span>
+                        <!-- Placeholder for map icon, actual icon font not yet integrated -->
+                    </div>
+                    <div class="socials">
+                        <a href="https://co.linkedin.com/company/pratech-group" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <!-- Placeholder for LinkedIn icon -->
+                        <!-- Add other social links here e.g. Twitter, Facebook -->
+                    </div>
+                </div>
+
+                <div class="footer-section links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#services">Servicios</a></li>
+                        <li><a href="#case-studies">Casos de Éxito</a></li>
+                        <li><a href="#resources">Recursos</a></li>
+                        <li><a href="#talent-culture">Únete al Equipo</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section contact-form">
+                    <h3>Contáctanos</h3>
+                    <form action="#" method="post">
+                        <input type="email" name="email" class="text-input contact-input" placeholder="Tu correo electrónico...">
+                        <textarea rows="3" name="message" class="text-input contact-input" placeholder="Tu mensaje..."></textarea>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Enviar
+                            <!-- Placeholder for send icon -->
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-partners">
+                <h4>Nuestros Partners Tecnológicos:</h4>
+                <!-- Placeholder for partner logos -->
+                <span>[Partner Logo 1]</span>
+                <span>[Partner Logo 2]</span>
+                <span>[Partner Logo 3]</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; Pratech Group <span id="year"></span> | Todos los derechos reservados.
+        </div>
     </footer>
 
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
