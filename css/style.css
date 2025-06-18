@@ -412,13 +412,16 @@ footer {
 
 /* CSS to hide slides for filtering */
 #case-studies .carousel-slide.hidden-by-filter {
-    /* Instead of display:none which breaks flexbox calculations for transform,
-       we can try to visually hide it but keep it in layout, or use display:none
-       and accept that the carousel might need more complex JS to handle it.
-       For a start, display:none is simpler to implement the hiding.
-       The JS will need to be careful about which slide is considered "current".
-    */
-    display: none !important; /* Force hide, may need JS adjustments for carousel counts */
+    flex-basis: 0 !important;
+    width: 0 !important;
+    min-width: 0 !important; /* Ensure min-width doesn't interfere */
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important; /* Hide content visually during collapse */
+    visibility: hidden !important; /* Further ensure it's not accessible */
+    /* We might need to also set border to 0 if slides have borders */
+    border-width: 0 !important;
 }
 
 #case-studies .carousel-slide .slide-content {
