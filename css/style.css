@@ -337,3 +337,354 @@ footer {
     text-decoration: underline;
     color: #7cb342; /* Darker lime green */
 }
+
+/* Case Studies Section Styles */
+#case-studies {
+    padding: 60px 0;
+    background-color: var(--pratech-light-gray); /* Alternating background color */
+    text-align: center;
+}
+
+#case-studies h2 {
+    font-size: 2.5rem;
+    color: var(--pratech-dark-blue);
+    margin-bottom: 15px;
+}
+
+.filter-placeholder span {
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: var(--pratech-white);
+    border: 1px solid var(--pratech-lime-green);
+    border-radius: 5px;
+    cursor: pointer; /* Indicates interactivity, though not yet functional */
+}
+
+.filter-placeholder span:hover {
+    background-color: var(--pratech-lime-green);
+    color: var(--pratech-dark-blue);
+}
+
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.case-study-card {
+    background-color: var(--pratech-white);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+}
+
+.case-study-logo-placeholder {
+    height: 50px; /* Placeholder height for logo */
+    background-color: #f0f0f0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-style: italic;
+    border-radius: 5px;
+}
+
+.case-study-card h3 { /* Client Name */
+    font-size: 1.6rem;
+    color: var(--pratech-dark-blue);
+    margin-bottom: 5px;
+}
+
+.case-study-card h4 { /* Project Name */
+    font-size: 1.1rem;
+    color: var(--pratech-lime-green);
+    margin-bottom: 15px;
+    font-weight: 500; /* Medium weight for project title */
+}
+
+.case-study-card p { /* Outcome */
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+    flex-grow: 1; /* Allows paragraph to take available space, pushing button down if any */
+}
+
+/* Placeholder styling for carousel controls */
+.carousel-controls-placeholder button {
+    background-color: var(--pratech-lime-green);
+    color: var(--pratech-dark-blue);
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.carousel-controls-placeholder button:hover {
+    background-color: #7cb342;
+}
+
+/* Resources Section Styles */
+#resources {
+    padding: 60px 0;
+    background-color: var(--pratech-white); /* Or alternate with light-gray */
+    text-align: center;
+}
+
+#resources h2 {
+    font-size: 2.5rem;
+    color: var(--pratech-dark-blue);
+    margin-bottom: 15px;
+}
+
+.resources-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    background-color: var(--pratech-light-gray);
+    border-radius: 8px;
+}
+
+.search-placeholder {
+    flex: 2; /* Takes more space */
+    margin-right: 20px; /* Spacing from tags */
+    min-width: 250px;
+}
+
+.search-placeholder input[type="text"] {
+    width: calc(70% - 80px); /* Adjust width considering button */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-placeholder button {
+    padding: 10px 15px;
+    border: none;
+    background-color: var(--pratech-lime-green);
+    color: var(--pratech-dark-blue);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-placeholder button:hover {
+     background-color: #7cb342;
+}
+
+.tags-placeholder {
+    flex: 1;
+    min-width: 200px;
+}
+
+.tags-placeholder span {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: var(--pratech-white);
+    border: 1px solid var(--pratech-lime-green);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.tags-placeholder span:hover {
+    background-color: var(--pratech-lime-green);
+    color: var(--pratech-dark-blue);
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.resource-card {
+    background-color: var(--pratech-white);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-card:hover { /* Consistent hover with other cards */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.resource-card h4 { /* Resource Title */
+    font-size: 1.3rem;
+    color: var(--pratech-dark-blue);
+    margin-bottom: 10px;
+}
+
+.resource-card h4 span { /* e.g. for "PDF" or "Webinar" type */
+    font-size: 0.9rem;
+    color: var(--pratech-lime-green);
+    font-weight: normal;
+    margin-left: 8px;
+}
+
+.resource-card p { /* Description */
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.resource-card .learn-more { /* Same as service card links */
+    color: var(--pratech-lime-green);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.resource-card .learn-more:hover {
+    text-decoration: underline;
+    color: #7cb342;
+}
+
+/* Talent & Culture Section Styles */
+#talent-culture {
+    padding: 60px 0;
+    background-color: var(--pratech-light-gray); /* Or alternate */
+    text-align: center;
+}
+
+#talent-culture h2 {
+    font-size: 2.5rem;
+    color: var(--pratech-dark-blue);
+    margin-bottom: 15px;
+}
+
+.talent-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px; /* Larger gap for distinct sections */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 40px auto; /* Margin before vacancies link */
+    text-align: left;
+}
+
+.talent-section h3 {
+    font-size: 1.8rem; /* Slightly larger for section sub-headings */
+    color: var(--pratech-dark-blue);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--pratech-lime-green); /* Accent line */
+    padding-bottom: 10px;
+    display: inline-block; /* To make border only as wide as text */
+}
+
+.mission-values p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.testimonial-card {
+    background-color: var(--pratech-white);
+    border-left: 5px solid var(--pratech-lime-green); /* Accent border */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0 5px 5px 0; /* Rounded corners on one side */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.testimonial-card cite {
+    font-style: normal;
+    font-weight: bold;
+    color: var(--pratech-dark-blue);
+    display: block; /* Put cite on new line */
+    text-align: right; /* Align cite to the right */
+}
+
+.office-photos .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.office-photos .photo-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.photo-caption-placeholder {
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+}
+
+.vacancies-link a.btn-primary { /* Re-using .btn-primary from hero if suitable, or define specific */
+    background-color: var(--pratech-lime-green);
+    color: var(--pratech-dark-blue);
+    padding: 12px 25px; /* Adjust size if needed */
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.vacancies-link a.btn-primary:hover {
+    background-color: #7cb342;
+    color: var(--pratech-dark-blue);
+}
+
+/* Parly Chatbot Placeholder Styles */
+#parly-chatbot-placeholder {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    background-color: var(--pratech-lime-green); /* Use accent color */
+    color: var(--pratech-dark-blue); /* Contrast text/icon color */
+    border-radius: 50%; /* Makes it circular */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Prominent shadow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Indicates interactivity */
+    z-index: 1000; /* Ensure it's above other content */
+    transition: transform 0.3s ease;
+}
+
+#parly-chatbot-placeholder:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    background-color: #7cb342; /* Darker lime green */
+}
+
+#parly-chatbot-placeholder .icon-placeholder {
+    font-size: 28px; /* Adjust icon size */
+    line-height: 1; /* Ensure proper vertical alignment if it's text */
+}
